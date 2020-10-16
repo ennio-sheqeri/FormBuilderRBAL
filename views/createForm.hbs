@@ -1,0 +1,71 @@
+
+<div class="content">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Options</h3>
+                </div>
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="categoria" class="col-sm-2 control-label">Category</label><button type="button" data-toggle="modal" data-target="#adminCreateCat" class="pull-right btn btn-primary">New Category</button>
+                        <select required id="categoria" name="categoria" class="form-control">
+                        {{#each dropdownVals}}
+                            <option> {{this.categoryName}}</option>
+                        {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="published" class="col-sm-2 control-label">Publish</label>
+                        <select required id="published" name="published" class="form-control">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label for="form-name" id="title-label" class="control-label">Form Name</label><span class="required-asterisk" style="display: inline;"> *</span>
+                <input type="text" name="form-name" id="form-name" class="form-control">
+            </div>
+            <div id="formBuilder">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="adminCreateCat" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">New Category</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="admintextName" id="categoryName" class="categoryName" >Category Name</label>
+                    <input type="text" id="admintextName" name="categoryName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="adminCatPublished" class="col-sm-2 control-label">Publish</label>
+                    <select required id="adminCatPublished" name="adminCatPublished" class="form-control">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="adminaddnewCategory">Save</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

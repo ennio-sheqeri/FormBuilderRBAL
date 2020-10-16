@@ -1,0 +1,101 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Form Builder</title>
+  <link href="css/bootstrap.css" rel="stylesheet"></link>
+  <link href="css/simple.css" rel="stylesheet"></link>
+  <script src="formBuilder.js"></script>
+</head>
+<body>
+<script>
+
+var attrs = [
+  {
+    name: 'first name',
+    value: 'Tony'
+  },
+  {
+    name: 'last name',
+    value: 'Stark'
+  },
+  {
+    name: 'age',
+    type: 'range',
+    min: 1,
+    max: 50
+  },
+  {
+    name: 'gender',
+    type: 'radio',
+    options: [
+      {
+        name: 'male',
+        value: 'male'
+      },
+      'female'
+    ]
+  },
+  {
+    name: 'favorate colors',
+    type: 'checkbox',
+    options: [
+      'red',
+      'green',
+      'blue',
+      'yellow'
+    ]
+  },
+  {
+    section: 'sub section',
+    content: [
+      {
+        name: 'parent',
+        placeholder: 'no need to fill'
+      },
+      {
+        name: 'child',
+        placeholder: 'no need to fill'
+      },
+      {
+        section: 'sub sub section',
+        content: [
+          {
+            name: 'more'
+          },
+          {
+            name: 'select',
+            type: 'select',
+            options: [1,2,3,4,5,6,7,8,9]
+          }
+        ]
+      }
+    ]
+  }
+]
+
+var section = {
+  section: 'sectionname',
+  content: attrs
+}
+
+
+window.onload = function() {
+  document.getElementById('struct').innerHTML = JSON.stringify(section, null, '    ');
+  document.getElementById('container').innerHTML += formBuilder.render(section);
+}
+
+</script>
+
+<div id="container">
+</div>
+
+<h3 style="margin: 30px;">
+  it can generate form view by struct like below<br>
+  it can be nested!
+</h3>
+
+<pre id="struct">
+</pre>
+
+</body>
+</html>

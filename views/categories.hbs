@@ -1,0 +1,105 @@
+
+<div class="content">
+
+    <div class="box" id="categorie">
+        <div class="box-header with-border">
+            <h3 class="box-title">Categorie</h3>
+            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Nuova Categoria</button>
+        </div>
+        <div class="box-body">
+
+            <table id="categorie_create" class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Publish</th>
+                    <th>Created By</th>
+                    <th>Created At</th>
+                    <th>More Details</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Publish</th>
+                    <th>Created By</th>
+                    <th>Created At</th>
+                    <th>More Details</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div class="box hidden" id="form_of_category">
+        <div class="box-header with-border">
+            <h3 class="box-title form-of"></h3>
+        </div>
+        <div class="box-body">
+
+            <table id="form_category" class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Create by</th>
+                    <th>Create at</th>
+
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Create by</th>
+                    <th>Create at</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="box-footer">
+            <button type="button" class="btn btn-danger pull-right" id="cat-go-back">GO Back</button>
+        </div>
+    </div>
+
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">New Category</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="textNome" id="nameCategory" class="nameCategory" >Name of Category</label>
+                    <input type="text" id="textNome" name="nameCategory" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="catPublished" class="col-sm-2 control-label">Publish</label>
+                    <select required id="catPublished" name="catPublished" class="form-control">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="addnewCategory">Save</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

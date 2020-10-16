@@ -1,0 +1,52 @@
+#container {
+  width: 600px;
+}
+.bold {
+  font-weight: bold;
+}
+.section-h1 {
+  font-size: 30px;  
+}
+.section-h2 {
+  font-size: 26px;
+}
+.section-h3 {
+  font-size: 22px;
+}
+.full-width {
+  width: 100%;
+}
+.attr {
+  margin: 10px;
+}
+.attr label {
+}
+.attr label > span {
+  width: 28%;
+  display: inline-block;
+}
+.attr label > input[type="text"],
+.attr label > input[type="range"],
+.attr label > select {
+  width: 70%;
+  display: inline-block;
+}
+
+.attr input[type="range"]:before {
+  content: attr(min);
+}
+.attr input[type="range"]:after {
+  content: attr(max);
+}
+
+.section-content {
+  margin-left: 50px;
+}
+
+span.attr-name {
+  width: 28%;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+}
+
